@@ -1,0 +1,1187 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://font/ami_8.tres" type="DynamicFont" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 620.0
+margin_bottom = 633.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "func _input( ):"
+
+[node name="AsText" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/AsText"]
+margin_right = 144.0
+margin_bottom = 19.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "event.as_text( ): 
+"
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/AsText"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="GetDevice" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 33.0
+margin_right = 600.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/GetDevice"]
+margin_right = 112.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "event.device: "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/GetDevice"]
+margin_left = 116.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+
+[node name="ActionType" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 44.0
+margin_right = 600.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionType"]
+margin_right = 208.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "event.is_action_type( ) : "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/ActionType"]
+margin_left = 212.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+
+[node name="IsPressed" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 55.0
+margin_right = 600.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/IsPressed"]
+margin_right = 176.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "event.is_pressed( ) : "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/IsPressed"]
+margin_left = 180.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+
+[node name="EventType" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 66.0
+margin_right = 600.0
+margin_bottom = 74.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/EventType"]
+margin_right = 96.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "event type: "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/EventType"]
+margin_left = 100.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+
+[node name="InputEventAction" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 77.0
+margin_right = 600.0
+margin_bottom = 96.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventAction"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventAction:"
+
+[node name="GetAction" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventAction"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventAction/GetAction"]
+margin_right = 184.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.get_action( ): "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventAction/GetAction"]
+margin_left = 188.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventWithModifiers" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 99.0
+margin_right = 600.0
+margin_bottom = 107.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventWithModifiers"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventWithModifiers:"
+
+[node name="InputEventKey" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 110.0
+margin_right = 600.0
+margin_bottom = 140.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventKey"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventKey:"
+
+[node name="Scancode" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventKey"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventKey/Scancode"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.scancode= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventKey/Scancode"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="Unicode" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventKey"]
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventKey/Unicode"]
+margin_right = 136.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.unicode= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventKey/Unicode"]
+margin_left = 140.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventMouse" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 143.0
+margin_right = 600.0
+margin_bottom = 184.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouse"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventMouse:"
+
+[node name="button_mask" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouse"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouse/button_mask"]
+margin_right = 168.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.button_mask= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouse/button_mask"]
+margin_left = 172.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="global_position" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouse"]
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouse/global_position"]
+margin_right = 200.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.global_position= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouse/global_position"]
+margin_left = 204.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="position" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouse"]
+margin_top = 33.0
+margin_right = 600.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouse/position"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.position= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouse/position"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventMouseButton" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 187.0
+margin_right = 600.0
+margin_bottom = 228.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseButton"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventMouseButton:"
+
+[node name="button_index" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouseButton"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseButton/button_index"]
+margin_right = 176.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.button_index= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseButton/button_index"]
+margin_left = 180.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="doubleclick" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouseButton"]
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseButton/doubleclick"]
+margin_right = 168.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.doubleclick= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseButton/doubleclick"]
+margin_left = 172.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="factor" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouseButton"]
+margin_top = 33.0
+margin_right = 600.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseButton/factor"]
+margin_right = 128.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.factor= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseButton/factor"]
+margin_left = 132.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventMouseMotion" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 231.0
+margin_right = 600.0
+margin_bottom = 261.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventMouseMotion:"
+
+[node name="pressure" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouseMotion"]
+visible = false
+margin_top = 11.0
+margin_right = 660.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion/pressure"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.pressure= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion/pressure"]
+margin_left = 148.0
+margin_right = 660.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="relative" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouseMotion"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion/relative"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.relative= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion/relative"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="speed" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouseMotion"]
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion/speed"]
+margin_right = 120.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.speed= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion/speed"]
+margin_left = 124.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="tilt" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMouseMotion"]
+visible = false
+margin_top = 33.0
+margin_right = 660.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion/tilt"]
+margin_right = 112.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.tilt= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMouseMotion/tilt"]
+margin_left = 116.0
+margin_right = 660.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventGesture" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 264.0
+margin_right = 600.0
+margin_bottom = 283.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventGesture"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventGesture:"
+
+[node name="position" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventGesture"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventGesture/position"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.position= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventGesture/position"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventMagnifyGesture" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 286.0
+margin_right = 600.0
+margin_bottom = 305.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMagnifyGesture"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventMagnifyGesture:"
+
+[node name="factor" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMagnifyGesture"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMagnifyGesture/factor"]
+margin_right = 128.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.factor= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMagnifyGesture/factor"]
+margin_left = 132.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventPanGesture" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 308.0
+margin_right = 600.0
+margin_bottom = 327.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventPanGesture"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventPanGesture:"
+
+[node name="delta" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventPanGesture"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventPanGesture/delta"]
+margin_right = 120.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	delta= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventPanGesture/delta"]
+margin_left = 124.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventJoypadButton" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 330.0
+margin_right = 600.0
+margin_bottom = 371.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventJoypadButton:"
+
+[node name="button_index" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/button_index"]
+margin_right = 176.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	button_index= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/button_index"]
+margin_left = 180.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="pressed" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/pressed"]
+margin_right = 136.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	pressed= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/pressed"]
+margin_left = 140.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="pressure" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+editor/display_folded = true
+margin_top = 33.0
+margin_right = 600.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/pressure"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	pressure= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/pressure"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventJoypadMotion" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 374.0
+margin_right = 600.0
+margin_bottom = 404.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadMotion"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventJoypadMotion:"
+
+[node name="axis" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadMotion"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadMotion/axis"]
+margin_right = 112.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	axis= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadMotion/axis"]
+margin_left = 116.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="axis_value" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadMotion"]
+editor/display_folded = true
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadMotion/axis_value"]
+margin_right = 160.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	axis_value= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadMotion/axis_value"]
+margin_left = 164.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventScreenDrag" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 407.0
+margin_right = 600.0
+margin_bottom = 459.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventScreenDrag:"
+
+[node name="index" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventScreenDrag"]
+editor/display_folded = true
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag/index"]
+margin_right = 120.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	index= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag/index"]
+margin_left = 124.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="position" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventScreenDrag"]
+editor/display_folded = true
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag/position"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	position= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag/position"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="relative" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventScreenDrag"]
+editor/display_folded = true
+margin_top = 33.0
+margin_right = 600.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag/relative"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	relative= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag/relative"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="speed" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventScreenDrag"]
+editor/display_folded = true
+margin_top = 44.0
+margin_right = 600.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag/speed"]
+margin_right = 120.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	speed= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag/speed"]
+margin_left = 124.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventScreenTouch" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 462.0
+margin_right = 600.0
+margin_bottom = 503.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenTouch"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventScreenTouch:"
+
+[node name="index" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventScreenTouch"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenTouch/index"]
+margin_right = 120.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	index= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenTouch/index"]
+margin_left = 124.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="position" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventScreenTouch"]
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenTouch/position"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	position= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenTouch/position"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="pressed" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventScreenTouch"]
+margin_top = 33.0
+margin_right = 600.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenTouch/pressed"]
+margin_right = 136.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	pressed= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenTouch/pressed"]
+margin_left = 140.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="InputEventMIDI" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 506.0
+margin_right = 600.0
+margin_bottom = 602.0
+custom_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+margin_right = 600.0
+margin_bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "if event is InputEventMIDI:"
+
+[node name="channel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+margin_top = 11.0
+margin_right = 600.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/channel"]
+margin_right = 136.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	channel= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/channel"]
+margin_left = 140.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="controller_number" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+editor/display_folded = true
+margin_top = 22.0
+margin_right = 600.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/controller_number"]
+margin_right = 216.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	controller_number= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/controller_number"]
+margin_left = 220.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="controller_value" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+editor/display_folded = true
+margin_top = 33.0
+margin_right = 600.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/controller_value"]
+margin_right = 208.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	controller_value= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/controller_value"]
+margin_left = 212.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="instrument" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+editor/display_folded = true
+margin_top = 44.0
+margin_right = 600.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/instrument"]
+margin_right = 160.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	instrument= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/instrument"]
+margin_left = 164.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="message" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+editor/display_folded = true
+margin_top = 55.0
+margin_right = 600.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/message"]
+margin_right = 136.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	message= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/message"]
+margin_left = 140.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="pitch" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+editor/display_folded = true
+margin_top = 66.0
+margin_right = 600.0
+margin_bottom = 74.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/pitch"]
+margin_right = 120.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	pitch= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/pitch"]
+margin_left = 124.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="pressure" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+editor/display_folded = true
+margin_top = 77.0
+margin_right = 600.0
+margin_bottom = 85.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/pressure"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	pressure= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/pressure"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="velocity" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
+editor/display_folded = true
+margin_top = 88.0
+margin_right = 600.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/velocity"]
+margin_right = 144.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  event.	velocity= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI/velocity"]
+margin_left = 148.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
