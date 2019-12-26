@@ -90,9 +90,19 @@ func _input(event):
 	if event is InputEventJoypadButton:
 		InputJoypadButton.visible = true
 		type += "InputEventJoypadButton "
-		$MarginContainer/VBoxContainer/InputEventJoypadButton/button_index/Result.text = str(event.button_index)
+		var index = event.button_index
+		$MarginContainer/VBoxContainer/InputEventJoypadButton/button_index/Result.text = str(index)
 		$MarginContainer/VBoxContainer/InputEventJoypadButton/pressed/Result.text = str(event.pressed)
 		$MarginContainer/VBoxContainer/InputEventJoypadButton/pressure/Result.text = str(event.pressure)
+		var device = event.device
+		var known = Input.is_joy_known(device)
+		$MarginContainer/VBoxContainer/InputEventJoypadButton/is_joy_known/Result.text = str(known)
+		if known:
+			$MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_name/Result.text = Input.get_joy_name(device)
+			$MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_guid/Result.text = Input.get_joy_guid(device)
+			var buttonName = Input.get_joy_button_string(index)
+			$MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_button_string/Result.text = buttonName
+			$MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_button_index_from_string/Result.text = str(Input.get_joy_button_index_from_string(buttonName))
 	else:
 		InputJoypadButton.visible = false
 	
@@ -122,7 +132,6 @@ func _input(event):
 		$MarginContainer/VBoxContainer/InputEventScreenTouch/pressed/Result.text = str(event.pressed)
 	else:
 		InputScreenTouch.visible = false
-	print(event is InputEventMIDI)
 	if event is InputEventMIDI:
 		InputMIDI.visible = true
 		type += "InputEventMIDI "

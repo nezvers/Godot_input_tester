@@ -20,7 +20,7 @@ custom_constants/margin_bottom = 20
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 620.0
-margin_bottom = 633.0
+margin_bottom = 710.0
 custom_constants/separation = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -57,6 +57,7 @@ text = "Result"
 autowrap = true
 
 [node name="GetDevice" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+editor/display_folded = true
 margin_top = 33.0
 margin_right = 600.0
 margin_bottom = 41.0
@@ -644,10 +645,9 @@ text = "Result"
 autowrap = true
 
 [node name="InputEventJoypadButton" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-editor/display_folded = true
 margin_top = 330.0
 margin_right = 600.0
-margin_bottom = 371.0
+margin_bottom = 426.0
 custom_constants/separation = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
@@ -658,6 +658,7 @@ custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "if event is InputEventJoypadButton:"
 
 [node name="button_index" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+editor/display_folded = true
 margin_top = 11.0
 margin_right = 600.0
 margin_bottom = 19.0
@@ -681,6 +682,7 @@ text = "Result"
 autowrap = true
 
 [node name="pressed" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+editor/display_folded = true
 margin_top = 22.0
 margin_right = 600.0
 margin_bottom = 30.0
@@ -727,11 +729,130 @@ custom_fonts/font = ExtResource( 2 )
 text = "Result"
 autowrap = true
 
+[node name="is_joy_known" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+editor/display_folded = true
+margin_top = 44.0
+margin_right = 600.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/is_joy_known"]
+margin_right = 288.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  input.is_joy_known(event.device)= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/is_joy_known"]
+margin_left = 292.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="get_joy_name" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+editor/display_folded = true
+margin_top = 55.0
+margin_right = 600.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_name"]
+margin_right = 288.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "  input.get_joy_name(event.device)= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_name"]
+margin_left = 292.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="get_joy_guid" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+editor/display_folded = true
+margin_top = 66.0
+margin_right = 600.0
+margin_bottom = 74.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_guid"]
+margin_right = 280.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = " input.get_joy_guid(event.device)= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_guid"]
+margin_left = 284.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="get_joy_button_string" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+editor/display_folded = true
+margin_top = 77.0
+margin_right = 600.0
+margin_bottom = 85.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_button_string"]
+margin_right = 400.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = " input.get_joy_button_string(event.button_index)= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_button_string"]
+margin_left = 404.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
+[node name="get_joy_button_index_from_string" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEventJoypadButton"]
+margin_top = 88.0
+margin_right = 600.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_button_index_from_string"]
+margin_right = 432.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = " Input.get_joy_button_index_from_string(button name)= "
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadButton/get_joy_button_index_from_string"]
+margin_left = 436.0
+margin_right = 600.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Result"
+autowrap = true
+
 [node name="InputEventJoypadMotion" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 editor/display_folded = true
-margin_top = 374.0
+margin_top = 429.0
 margin_right = 600.0
-margin_bottom = 404.0
+margin_bottom = 459.0
 custom_constants/separation = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventJoypadMotion"]
@@ -790,9 +911,9 @@ autowrap = true
 
 [node name="InputEventScreenDrag" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 editor/display_folded = true
-margin_top = 407.0
+margin_top = 462.0
 margin_right = 600.0
-margin_bottom = 459.0
+margin_bottom = 514.0
 custom_constants/separation = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenDrag"]
@@ -900,9 +1021,9 @@ autowrap = true
 
 [node name="InputEventScreenTouch" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 editor/display_folded = true
-margin_top = 462.0
+margin_top = 517.0
 margin_right = 600.0
-margin_bottom = 503.0
+margin_bottom = 558.0
 custom_constants/separation = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventScreenTouch"]
@@ -983,9 +1104,9 @@ autowrap = true
 
 [node name="InputEventMIDI" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 editor/display_folded = true
-margin_top = 506.0
+margin_top = 561.0
 margin_right = 600.0
-margin_bottom = 602.0
+margin_bottom = 657.0
 custom_constants/separation = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEventMIDI"]
