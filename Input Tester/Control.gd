@@ -111,6 +111,7 @@ func _input(event):
 		type += "InputEventJoypadMotion "
 		$MarginContainer/VBoxContainer/InputEventJoypadMotion/axis/Result.text = str(event.axis)
 		$MarginContainer/VBoxContainer/InputEventJoypadMotion/axis_value/Result.text = str(event.axis_value)
+		$MarginContainer/VBoxContainer/InputEventJoypadMotion/get_joy_axis_string/Result.text = Input.get_joy_axis_string(event.axis)
 	else:
 		InputJoypadMotion.visible = false
 	
